@@ -12,8 +12,8 @@ public class ShopApp {
 		
 		int measurement = 3;
 		
-		Clothing item1 = new Clothing(), item2 = new Clothing();
-		Clothing[] items = {item1, item2};
+		Clothing item1 = new Clothing(), item2 = new Clothing(), item3 = new Clothing(), item4 = new Clothing();
+		Clothing[] items = {item1, item2, item3, item4};
 		
 		
 		final double tax = 0.2;
@@ -24,6 +24,14 @@ public class ShopApp {
 		item2.description = "Orange T-shirt";
 		item2.price = 10.5;
 		item2.size = "S";
+		
+		item3.description = "Green Scarf";
+		item3.price = 5;
+		item3.size = "S";
+		
+		item4.description = "Blue T-Shirt";
+		item4.price = 10.5;
+		item4.size = "S";
 		
 		/*System.out.println("Item 1: " + item1.description + " price: " + item1.price + " size: " + item1.size + ", item2: " + item2.description + " price: " + item2.price + " size: " + item2.size);
 		total = (item1.price + item2.price*2)*(1 + tax);
@@ -46,8 +54,13 @@ public class ShopApp {
 		}
 		
 		for(Clothing item: items) {
+			if(total < 15) {
+			if(item.size.equals(c1.size)) {
 			total += item.price;
 			System.out.println("Item: " + item.description + ", price: " + item.price + ", size: " + item.size);
+			}
+			}
+			else break;
 		}
 		System.out.println("Total a pagar: " + total);
 	}
