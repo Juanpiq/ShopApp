@@ -17,7 +17,7 @@ public class ShopApp {
 		
 		
 		final double tax = 0.2;
-		double total;
+		double total = 0.0;
 		item1.description = "Blue Jacket";
 		item1.price = 20.9;
 		
@@ -25,9 +25,9 @@ public class ShopApp {
 		item2.price = 10.5;
 		item2.size = "S";
 		
-		System.out.println("Item 1: " + item1.description + " price: " + item1.price + " size: " + item1.size + ", item2: " + item2.description + " price: " + item2.price + " size: " + item2.size);
+		/*System.out.println("Item 1: " + item1.description + " price: " + item1.price + " size: " + item1.size + ", item2: " + item2.description + " price: " + item2.price + " size: " + item2.size);
 		total = (item1.price + item2.price*2)*(1 + tax);
-		System.out.println("Total a pagar: " + total);
+		System.out.println("Total a pagar: " + total);*/
 		
 		switch (measurement) {
 			case 1: case 2: case 3:
@@ -44,6 +44,12 @@ public class ShopApp {
 			
 			default: c1.size = "X";
 		}
+		
+		for(Clothing item: items) {
+			total += item.price;
+			System.out.println("Item: " + item.description + ", price: " + item.price + ", size: " + item.size);
+		}
+		System.out.println("Total a pagar: " + total);
 	}
 
 }
