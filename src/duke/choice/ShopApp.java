@@ -8,9 +8,12 @@ public class ShopApp {
 		Customer c1 = new Customer ();
 		c1.setName("Pinky");
 		c1.setSize("S");
-		System.out.println("Nombre del objeto: " + c1.name);
 		
-		int measurement = 3;
+		
+		int measurement = 8;
+		c1.setSize(measurement);
+		
+		System.out.println("Nombre del objeto: " + c1.name + ", " + c1.getSize());
 		
 		Clothing item1 = new Clothing(), item2 = new Clothing(), item3 = new Clothing(), item4 = new Clothing();
 		Clothing[] items = {item1, item2, item3, item4};
@@ -37,30 +40,13 @@ public class ShopApp {
 		total = (item1.price + item2.price*2)*(1 + tax);
 		System.out.println("Total a pagar: " + total);*/
 		
-		switch (measurement) {
-			case 1: case 2: case 3:
-				c1.setSize("S");
-			break;
-
-			case 4: case 5: case 6:
-				c1.setSize("M");
-			break;
-			
-			case 7: case 8: case 9:
-				c1.setSize("L");
-			break;
-			
-			default: c1.setSize("X");
-		}
-		
 		for(Clothing item: items) {
-			if(total < 15) {
 			if(item.getSize().equals(c1.getSize())) {
 			total += item.getPrice();
 			System.out.println("Item: " + item.getDescription() + ", price: " + item.getPrice() + ", size: " + item.getSize());
+			if(total < 15) break;
 			}
-			}
-			else break;
+			 
 		}
 		System.out.println("Total a pagar: " + total);
 	}
