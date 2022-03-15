@@ -5,13 +5,14 @@ public class ShopApp {
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Duke Choice Shop!");
-		Customer c1 = new Customer ();
-		c1.setName("Pinky");
-		c1.setSize("S");
+		
+		//c1.setName("Pinky");
+		//c1.setSize("S");
 		
 		
-		int measurement = 8;
-		c1.setSize(measurement);
+		int measurement = 3;
+		//c1.setSize(measurement);
+		Customer c1 = new Customer("Pinky", measurement);
 		
 		System.out.println("Nombre del objeto: " + c1.getName() + ", " + c1.getSize());
 		

@@ -12,6 +12,12 @@ public class Customer {
 		this.items = items;
 	}
 
+	public Customer(String name, int measurement) {
+		super();
+		this.name = name;
+		setSize(measurement);
+	}
+
 	public String getName() {
 		return name;
 	}
