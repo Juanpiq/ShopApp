@@ -15,6 +15,7 @@ public class ShopApp {
 		Customer c1 = new Customer("Pinky", measurement);
 		
 		System.out.println("Nombre del objeto: " + c1.getName() + ", " + c1.getSize());
+		System.out.println("El pago minimo a pagar es: " + Clothing.getMIN_PRICE());
 		
 		Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
 		Clothing item2 = new Clothing("Orange T-shirt", 10.5, "S");
