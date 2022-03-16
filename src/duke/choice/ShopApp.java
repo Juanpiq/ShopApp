@@ -63,6 +63,23 @@ public class ShopApp {
 		
 		total = c1.getTotalClothingCost(total);
 		System.out.println("Total a pagar: " + total);
+		
+		int count = 0;
+		int average = 0;
+		
+		for(Clothing item: c1.getItems()) {
+			if(item.getSize().equals("L")) {
+				count++;
+				average += item.getPrice();
+			}
+		}
+		try {
+			average = (count == 0) ? 0 : average / count;
+			System.out.println("Average price " + average + ", count " + count);
+		} catch(ArithmeticException e) {
+			System.out.println("No se puede dividir entre 0");
+		}
+		
 	}
 
 }
